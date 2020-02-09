@@ -2,7 +2,7 @@
 \alias{HMM.mllk}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Computing minus the log-likelihood from the working parameters
 }
 \description{
 Computing minus the log-likelihood from the working parameters
