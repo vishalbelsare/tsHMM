@@ -2,10 +2,10 @@
 \alias{HMM.pseudo_residuals}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Pseudo-residuals
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Pseudo-residuals
 }
 \usage{
 HMM.pseudo_residuals(x, mod)
@@ -33,7 +33,7 @@ HMM.pseudo_residuals(x, mod)
 Zucchini, W., MacDonald, I., Langrock, R. (2016). Hidden Markov Models for Time Series. New York: Chapman and Hall/CRC, https://doi.org/10.1201/b20790
 }
 \author{
-%%  ~~who you are~~
+Resul Akay
 }
 \note{
 %%  ~~further notes~~

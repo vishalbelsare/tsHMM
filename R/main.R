@@ -1,4 +1,3 @@
-### A.1.1
 #'@description Transforming natural parameters to working
 #' @export
 HMM.pn2pw <- function(m, lambda, gamma, delta = NULL, stationary = TRUE){
@@ -23,8 +22,6 @@ HMM.pn2pw <- function(m, lambda, gamma, delta = NULL, stationary = TRUE){
 }
 
 
-
-### A.1.2
 
 #'@description Transforming working parameters to natural
 #' @export
@@ -53,7 +50,7 @@ HMM.pw2pn <- function(m,parvect,stationary=TRUE){
 }
 
 
-### A.1.3
+
 #'@description Computing minus the log-likelihood from the working parameters
 #' @export
 HMM.mllk <- function(parvect,x,m,stationary=TRUE,...){
@@ -91,7 +88,6 @@ HMM.mllk <- function(parvect,x,m,stationary=TRUE,...){
 
 
 
-### A.1.4
 #'@description Computing the MLEs, given starting values for the natural parameters
 #' @export
 HMM.mle <- function(x,m,lambda0,gamma0,delta=NULL,stationary=TRUE,...){
@@ -119,7 +115,6 @@ HMM.mle <- function(x,m,lambda0,gamma0,delta=NULL,stationary=TRUE,...){
 
 
 
-### A.1.5
 #'@description Generating a sample
 #' @export
 HMM.generate_sample  <- function(ns,mod){
@@ -138,9 +133,6 @@ HMM.generate_sample  <- function(ns,mod){
   return(x)
 }
 
-
-
-### A.1.6
 #'@description Global decoding by the Viterbi algorithm
 #' @export
 HMM.viterbi <-function(x,mod){
@@ -170,7 +162,7 @@ HMM.viterbi <-function(x,mod){
 
 
 
-### A.1.7
+
 #'@description Computing log(forward probabilities)
 #' @export
 HMM.lforward <- function(x,mod){
@@ -196,7 +188,6 @@ HMM.lforward <- function(x,mod){
 
 
 
-### A.1.8
 #'@description Computing log(backward probabilities)
 #' @export
 HMM.lbackward <- function(x,mod){
@@ -218,7 +209,7 @@ HMM.lbackward <- function(x,mod){
 
 
 
-### A.1.9
+
 #'@description Conditional probabilities
 #==Conditional probability that observation at time t equals
 #  xc, given all observations other than that at time t.
@@ -253,8 +244,6 @@ HMM.conditional <- function(xc,x,mod){
 
 
 
-### A.1.10
-
 #'@description Pseudo-residuals
 #' @export
 HMM.pseudo_residuals <- function(x,mod){
@@ -274,7 +263,6 @@ HMM.pseudo_residuals <- function(x,mod){
 
 
 
-### A.1.11
 
 #'@description State probabilities
 #' @export
@@ -292,9 +280,6 @@ HMM.state_probs <- function(x,mod){
   return(stateprobs)
 }
 
-
-
-### A.1.12
 
 #'@description State prediction
 # Note that state output 'statepreds' is a matrix even if h=1.
@@ -316,8 +301,6 @@ HMM.state_prediction <- function(h=1,x,mod){
 }
 
 
-
-### A.1.13
 #'@description Local decoding
 #' @export
 HMM.local_decoding <- function(x,mod){
@@ -333,7 +316,6 @@ HMM.local_decoding <- function(x,mod){
 
 
 
-### A.1.14
 #'@description Forecast probabilities
 # Note that the output 'dxf' is a matrix.
 #' @export

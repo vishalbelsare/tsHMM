@@ -2,8 +2,8 @@
 \alias{HMM.mle}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
-}
+ Computing the MLEs, given starting values for the natural parameters
+ }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }

@@ -2,7 +2,8 @@
 \alias{HMM.conditional}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-conditional
+Conditional probabilities.
+Conditional probability that observation at time t equals xc, given all observations other than that at time t. Note: xc is a vector and the result (dxc) is a matrix
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~

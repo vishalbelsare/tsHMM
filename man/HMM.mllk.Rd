@@ -5,7 +5,7 @@
 %%  ~~function to do ... ~~
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Computing minus the log-likelihood from the working parameters
 }
 \usage{
 HMM.mllk(parvect, x, m, stationary = TRUE, ...)
