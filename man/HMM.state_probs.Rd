@@ -2,7 +2,7 @@
 \alias{HMM.state_probs}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+State Prob
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
