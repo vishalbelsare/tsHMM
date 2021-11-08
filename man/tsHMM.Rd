@@ -2,14 +2,12 @@
 % Please edit documentation in R/tshmm_class.R
 \name{tsHMM}
 \alias{tsHMM}
-\title{Forecasting Using Hidden Markov Models.}
+\title{Forecasting Using Hidden Markov Models}
 \source{
 \url{http://www.hmms-for-time-series.de/second/appendix-a/ZMLcode.txt}
 }
 \description{
-Forecasting Using Hidden Markov Models.
-
-Forecasting Using Hidden Markov Models.
+Forecasting Using Hidden Markov Models
 }
 \examples{
 \dontrun{

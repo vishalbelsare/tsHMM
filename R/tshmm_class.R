@@ -1,4 +1,6 @@
-#' @title Forecasting Using Hidden Markov Models.
+#' @title Forecasting Using Hidden Markov Models
+#' @description
+#' Forecasting Using Hidden Markov Models
 #' @examples
 #' \dontrun{
 #'
@@ -41,7 +43,14 @@ tsHMM <- R6::R6Class(
     #' @param lambda lambda
     #' @param gamma gamma
     initialize = function(x, h = frequency(x), m, lambda, gamma){
+
+      if(class(x)!= "ts"){
+        stop("x must be a time series")
+      }
+
       private$x <- x
+      private$d <- time(x)
+      private$n <- length(x)
       private$h <- h
       private$m <- m
       private$lambda <- lambda
@@ -66,6 +75,8 @@ tsHMM <- R6::R6Class(
   ),
   private = list(
     x = NULL,
+    d = NULL,
+    n = NULL,
     h = NULL,
     m = NULL,
     lambda = NULL,
