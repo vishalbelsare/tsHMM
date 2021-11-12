@@ -1,31 +1,40 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # tsHMM
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of tsHMM is to …
+The goal of tsHMM is to ...
 
 ## Installation
 
-You can install the development version from
-[GitHub](https://github.com/) with:
+You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("Akai01/tsHMM")
 ```
-
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
 
-We will use `earthquakes` data and try to forecast probability of number
-of earthquakes in a year.
+We will use ```earthquakes``` data and try to forecast probability of number of earthquakes in a year.
 
-``` r
+```{r example}
 library(tsHMM)
 
 data("earthquakes", package = "tsHMM")
@@ -45,6 +54,6 @@ model$fit()
 forecasts <- model$forecast(xf = 0:50)
 
 model$plot(h = 1:4)
+
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />

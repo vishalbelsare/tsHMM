@@ -46,6 +46,7 @@ Resul Akay
 \item \href{#method-new}{\code{tsHMM$new()}}
 \item \href{#method-fit}{\code{tsHMM$fit()}}
 \item \href{#method-forecast}{\code{tsHMM$forecast()}}
+\item \href{#method-plot}{\code{tsHMM$plot()}}
 \item \href{#method-clone}{\code{tsHMM$clone()}}
 }
 }
@@ -109,6 +110,15 @@ Forecast fitted HMM
 }
 \if{html}{\out{</div>}}
 }
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-plot"></a>}}
+\if{latex}{\out{\hypertarget{method-plot}{}}}
+\subsection{Method \code{plot()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{tsHMM$plot(h = NULL)}\if{html}{\out{</div>}}
+}
+
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}

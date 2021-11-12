@@ -68,9 +68,38 @@ tsHMM <- R6::R6Class(
     #' @description Forecast fitted HMM
     #' @param xf xf
     forecast = function(xf = NULL){
-
+      private$xf <- xf
       forecasts <- private$forecast_(xf)
+      private$forecasts <- forecasts
       return(forecasts)
+    },
+    plot = function(h = NULL){
+
+      if(!all(h %in% seq_len(private$h))){
+        warning("h must be a sequence or an integer in ",
+                paste0(seq_len(private$h), sep = ", " ), private$h,
+                " has been selected")
+        h <- private$h
+      }
+      forecasts <- private$forecasts
+      xf<- private$xf
+      n   <- length(private$x)
+      d <- time(private$x)
+      if(length(h)>4){
+        warning("More than 4 horizon plots looks uggly, so I select only fist 4 horizons")
+        h <- h[1:4]
+      }
+
+      if(length(h)>1){
+        mm <- length(h)/2
+        par(mfrow=c(mm, mm),las=1)
+      }
+
+      for (i in h){
+        fc<-forecasts[i,]
+        plot(xf,fc,type="h",main=paste("Forecast distribution for", d[n]+i))
+      }
+
     }
   ),
   private = list(
@@ -84,6 +113,8 @@ tsHMM <- R6::R6Class(
     stationary = NULL,
     fitted_model = NULL,
     delta = NULL,
+    forecasts = NULL,
+    xf = NULL,
     # Transforming natural parameters to working
     pn2pw = function(m, lambda, gamma, delta = NULL, stationary = TRUE){
       tlambda <- log(lambda)
